@@ -11,7 +11,7 @@ func Overlaps(a, b kata.Interval) bool {
 	if a == b {
 		return true
 	}
-	if b.Start <= a.End {
+	if a.Start <= b.End && b.Start <= a.End {
 		return true
 	}
 
